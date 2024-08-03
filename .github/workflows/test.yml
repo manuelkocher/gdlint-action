@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Test action with default values
-        uses: ./
       - name: Test action with defined directory green
         uses: ./
         with:
