@@ -16,7 +16,7 @@ jobs:
         with:
           directory: test/green
           python_version: '3.11'
-      - name: Test action with defined python version
+      - name: Test action with defined gdtoolkit version
         uses: ./
         with:
           directory: test/green
