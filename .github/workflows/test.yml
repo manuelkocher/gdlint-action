@@ -11,9 +11,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Test action with defined directory green
+      - name: Test action with defined python version
         uses: ./
         with:
           directory: test/green
+          python_version: '3.11'
+      - name: Test action with defined python version
+        uses: ./
+        with:
+          directory: test/green
+          gdtoolkit_version: '4.2.0'
         
 
