@@ -1,5 +1,5 @@
 name: 'Runs gdlint on GDScript Code'
-description: 'Runs gdlint on all GDScript Code in a repository.'
+description: 'Runs gdlint on GDScript Code in directory in the repository.'
 inputs:
   python:
     description: |
