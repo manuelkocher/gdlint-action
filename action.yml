@@ -34,21 +34,26 @@ runs:
         python-version: '3.10' # optional
     - name: Checkout Repository
       uses: actions/checkout@v4
+      shell: bash
       with:
         submodules: recursive
     - if: ${{ inputs.gdtoolkit_version  == 'latest' }}
       name: Install gdtoolkit
+      shell: bash
       run: |
         pip install gdtoolkit
     - if: ${{ inputs.gdtoolkit_version  != 'latest' }}
       name: Install gdtoolkit
+      shell: bash
       run: |
         pip install gdtoolkit==${{ inputs.gdtoolkit_version }}
     - if: ${{ inputs.directory  == 'false' }}
       name: Run gdlint
+      shell: bash
       run: |
         gdlint *.gd
     - if: ${{ inputs.directory  != 'false' }}
       name: Run gdlint
+      shell: bash
       run: |
         gdlint ${{ inputs.directory }}/*.gd
