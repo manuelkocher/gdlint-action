@@ -29,9 +29,11 @@ runs:
     - if: ${{ inputs.python  == 'true' }}
       name: Setup Python
       uses: actions/setup-python@v5.1.1
+    - if: ${{ inputs.python == 'true' }} && ${{ inputs.python_version != 'true' }}
+      name: Setup Python
+      uses: actions/setup-python@v5.1.1
       with:
-        # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
-        python-version: '3.10' # optional
+        python_version: ${{ inputs.python }}
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
