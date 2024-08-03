@@ -34,7 +34,6 @@ runs:
         python-version: '3.10' # optional
     - name: Checkout Repository
       uses: actions/checkout@v4
-      shell: bash
       with:
         submodules: recursive
     - if: ${{ inputs.gdtoolkit_version  == 'latest' }}
